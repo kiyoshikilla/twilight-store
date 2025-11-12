@@ -153,8 +153,8 @@ STATICFILES_DIRS = (
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
+MEDIA_URL = f"https://res.cloudinary.com/{os.getenv('CLOUD_NAME')}/media/"
 
-MEDIA_URL = os.getenv('CLOUDINARY_URL')
 # MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
@@ -169,6 +169,7 @@ CLOUDINARY_STORAGE = {
     'API_KEY': os.getenv('CLOUD_API_KEY'),
     'API_SECRET': os.getenv('CLOUD_API_SECRET'),
 }
+
 
 
 
